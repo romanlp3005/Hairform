@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairform - Coiffeur Visagiste à Trèbes depuis 1998</title>
+    <meta name="description" content="Salon de coiffure Hairform à Trèbes, établi depuis 1998. Plus de 25 ans d'expertise en coiffure mixte, coloriste et visagiste. 04 68 78 99 00.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        /* Couleurs personnalisées */
+        .bg-hairform-blue { background-color: #102643; }
+        .text-hairform-gold { color: #c3b713; }
+        .bg-hairform-gold { background-color: #c3b713; }
+        .border-hairform-gold { border-color: #c3b713; }
+        .hover-text-hairform-gold:hover { color: #c3b713; }
+        .hover-bg-hairform-gold:hover { background-color: #c3b713; }
+    </style>
+</head>
+<body class="bg-hairform-blue text-white scroll-smooth">
+
+    <!-- Navigation -->
+    <nav class="bg-hairform-blue shadow-lg border-b border-white/10 fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- Logo aux couleurs demandées -->
+                    <div class="text-2xl font-bold text-white tracking-widest serif">
+                        HAIR<span class="text-hairform-gold">FORM</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#salon" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Le Salon</a>
+                    <a href="#prestations" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Tarifs</a>
+                    <a href="#infos" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Horaires</a>
+                    <a href="tel:0468789900" class="bg-hairform-gold text-white px-6 py-2 rounded-full hover:bg-white hover:text-hairform-blue transition shadow-lg font-semibold">
+                        <i class="fas fa-phone-alt mr-2"></i>04 68 78 99 00
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-white hover-text-hairform-gold focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-hairform-blue border-t border-white/10">
+            <a href="#salon" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Le Salon</a>
+            <a href="#prestations" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Tarifs</a>
+            <a href="#infos" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Horaires & Accès</a>
+            <a href="tel:0468789900" class="block px-4 py-3 text-hairform-gold font-bold bg-white/5">Appeler maintenant</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-20 h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Darker Overlay for better text contrast -->
+        <div class="absolute inset-0 bg-hairform-blue opacity-50 z-0"></div> <!-- Solid color base -->
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Salon de coiffure" class="absolute w-full h-full object-cover opacity-40 mix-blend-overlay">
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <p class="text-hairform-gold uppercase tracking-[0.3em] mb-4 font-medium animate-fade-in-up">Bienvenue chez Hairform</p>
+            <h1 class="text-5xl md:text-7xl text-white font-bold mb-6 leading-tight">
+                Révélez votre <br/><span class="italic text-hairform-gold">beauté naturelle</span>
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl mb-10 font-light drop-shadow-md">
+                Votre coiffeur visagiste à Trèbes <strong>depuis 1998</strong>. Plus de 25 ans d'expertise pour elle, lui et les enfants.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:0468789900" class="bg-hairform-gold text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 shadow-xl text-lg">
+                    Prendre Rendez-vous
+                </a>
+                <a href="#prestations" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 text-lg">
+                    Voir les Tarifs
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section: Le Salon -->
+    <section id="salon" class="py-20 bg-hairform-blue relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold text-white mb-6">Un moment de détente <br> <span class="italic text-hairform-gold">rien que pour vous</span></h2>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Installé au cœur de Trèbes <strong>depuis 1998</strong>, le salon <strong>Hairform</strong> vous accueille dans une ambiance chaleureuse et conviviale. Avec plus de 25 ans d'expérience, notre équipe de passionnés est à votre écoute pour vous conseiller et réaliser la coiffure qui vous ressemble.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Spécialistes de la couleur et des techniques de coupe, nous utilisons des produits de qualité pour respecter la nature de vos cheveux. Que ce soit pour un relooking complet ou un simple rafraîchissement, votre satisfaction est notre priorité depuis toujours.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-lg text-center backdrop-blur-sm">
+                            <i class="fas fa-cut text-3xl text-hairform-gold mb-2"></i>
+                            <h4 class="font-bold text-white">Visagiste</h4>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-lg text-center backdrop-blur-sm">
+                            <i class="fas fa-child text-3xl text-hairform-gold mb-2"></i>
+                            <h4 class="font-bold text-white">Enfants bienvenus</h4>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-lg text-center backdrop-blur-sm">
+                            <i class="fas fa-snowflake text-3xl text-hairform-gold mb-2"></i>
+                            <h4 class="font-bold text-white">Climatisé</h4>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-lg text-center backdrop-blur-sm">
+                            <i class="fas fa-parking text-3xl text-hairform-gold mb-2"></i>
+                            <h4 class="font-bold text-white">Parking Gratuit</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+                    <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Intérieur salon" class="absolute w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Tarifs (Estimations basées sur vos infos) -->
+    <section id="prestations" class="py-20 bg-hairform-blue relative overflow-hidden">
+        <!-- Décoration d'arrière plan -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-hairform-gold rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-hairform-gold font-bold tracking-wider uppercase text-sm">Nos Services</span>
+                <h2 class="text-4xl font-bold text-white mt-2 font-serif">Tarifs & Prestations</h2>
+                <div class="w-24 h-1 bg-hairform-gold mx-auto mt-4 rounded-full"></div>
+                <p class="mt-4 text-gray-400 italic font-light">L'excellence au service de votre chevelure</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Carte Femme -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl shadow-xl hover:border-hairform-gold/50 transition-colors duration-300">
+                    <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+                        <h3 class="text-2xl font-bold text-white font-serif">Coiffure Femme</h3>
+                        <i class="fas fa-female text-2xl text-hairform-gold"></i>
+                    </div>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-end group">
+                            <span class="text-gray-300 font-medium group-hover:text-hairform-gold transition-colors">Shampooing + Brushing</span>
+                            <span class="font-bold text-white text-lg">dès 18€</span>
+                        </li>
+                        <li class="flex justify-between items-end group">
+                            <span class="text-gray-300 font-medium group-hover:text-hairform-gold transition-colors">Forfait Coupe <span class="text-xs text-gray-500 block font-normal">Shampooing + Coupe + Brushing</span></span>
+                            <span class="font-bold text-white text-lg">dès 28€</span>
+                        </li>
+                        <li class="flex justify-between items-end group">
+                            <span class="text-gray-300 font-medium group-hover:text-hairform-gold transition-colors">Couleur (Racines)</span>
+                            <span class="font-bold text-white text-lg">dès 22€</span>
+                        </li>
+                        <li class="flex justify-between items-end group">
+                            <span class="text-gray-300 font-medium group-hover:text-hairform-gold transition-colors">Mèches / Balayage</span>
+                            <span class="font-bold text-white text-lg">dès 28€</span>
+                        </li>
+                        <li class="flex justify-between items-end group">
+                            <span class="text-gray-300 font-medium group-hover:text-hairform-gold transition-colors">Soins profonds</span>
+                            <span class="font-bold text-white text-lg italic text-sm">sur devis</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-8">
+                    <!-- Carte Homme -->
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl shadow-xl hover:border-hairform-gold/50 transition-colors duration-300 flex-1">
+                        <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+                            <h3 class="text-2xl font-bold text-white font-serif">Coiffure Homme</h3>
+                            <i class="fas fa-male text-2xl text-hairform-gold"></i>
+                        </div>
+                        <ul class="space-y-6">
+                            <li class="flex justify-between items-end group">
+                                <span class="text-gray-300 font-medium group-hover:text-hairform-gold transition-colors">Forfait Coupe <span class="text-xs text-gray-500 block font-normal">Shampooing + Coupe + Coiffage</span></span>
+                                <span class="font-bold text-white text-lg">17€</span>
+                            </li>
+                            <li class="flex justify-between items-end group">
+                                <span class="text-gray-300 font-medium group-hover:text-hairform-gold transition-colors">Coupe tondeuse</span>
+                                <span class="font-bold text-white text-lg">15€</span>
+                            </li>
+                            <li class="flex justify-between items-end group">
+                                <span class="text-gray-300 font-medium group-hover:text-hairform-gold transition-colors">Taille de Barbe</span>
+                                <span class="font-bold text-white text-lg italic text-sm">sur demande</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Carte Juniors -->
+                    <div class="bg-gradient-to-r from-hairform-gold/10 to-transparent border border-hairform-gold/30 p-6 rounded-2xl flex items-center justify-between relative overflow-hidden group">
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold text-white mb-1">Étudiants & Juniors</h3>
+                            <p class="text-sm text-gray-400 mb-3">Tarifs préférentiels -20 ans</p>
+                            <a href="tel:0468789900" class="text-hairform-gold font-bold text-sm uppercase tracking-wider hover:text-white transition flex items-center">
+                                Nous consulter <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                        <div class="bg-hairform-gold w-12 h-12 rounded-full flex items-center justify-center text-hairform-blue shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-gray-500 text-xs mb-4 uppercase tracking-widest">Un doute ? Une question ?</p>
+                <a href="tel:0468789900" class="inline-flex items-center justify-center px-10 py-4 border border-hairform-gold text-base font-medium rounded-full text-hairform-gold bg-transparent hover:bg-hairform-gold hover:text-hairform-blue md:text-lg shadow-[0_0_15px_rgba(195,183,19,0.15)] hover:shadow-[0_0_25px_rgba(195,183,19,0.4)] transition-all duration-300">
+                    <i class="fas fa-phone-alt mr-3"></i> Prendre rendez-vous au 04 68 78 99 00
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horaires et Carte -->
+    <section id="infos" class="py-0 flex flex-col md:flex-row bg-white">
+        <!-- Informations -->
+        <div class="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center bg-hairform-blue text-white border-t border-white/10">
+            <h2 class="text-3xl font-bold mb-8 text-hairform-gold">Horaires & Contact</h2>
+            
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <i class="fas fa-map-marker-alt mt-1 mr-4 text-hairform-gold w-5"></i>
+                    <div>
+                        <h4 class="font-bold text-lg">Adresse</h4>
+                        <p class="text-gray-300">19 Av. Pasteur<br>11800 Trèbes</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <i class="fas fa-phone mt-1 mr-4 text-hairform-gold w-5"></i>
+                    <div>
+                        <h4 class="font-bold text-lg">Téléphone</h4>
+                        <p class="text-gray-300"><a href="tel:0468789900" class="hover:text-hairform-gold transition">04 68 78 99 00</a></p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <i class="fas fa-clock mt-1 mr-4 text-hairform-gold w-5"></i>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Heures d'ouverture</h4>
+                        <table class="text-gray-300 text-sm w-full max-w-xs">
+                            <tbody>
+                                <tr class="border-b border-white/10"><td class="py-1">Lundi</td><td class="text-right py-1">Fermé</td></tr>
+                                <tr class="border-b border-white/10"><td class="py-1">Mardi</td><td class="text-right py-1">09:00 - 18:00</td></tr>
+                                <tr class="border-b border-white/10"><td class="py-1">Mercredi</td><td class="text-right py-1">09:00 - 12:00 / 14:00 - 18:00</td></tr>
+                                <tr class="border-b border-white/10"><td class="py-1">Jeudi</td><td class="text-right py-1">09:00 - 12:00 / 14:00 - 18:00</td></tr>
+                                <tr class="border-b border-white/10"><td class="py-1">Vendredi</td><td class="text-right py-1">09:00 - 18:00</td></tr>
+                                <tr class="border-b border-white/10"><td class="py-1">Samedi</td><td class="text-right py-1">09:00 - 18:00</td></tr>
+                                <tr><td class="py-1">Dimanche</td><td class="text-right py-1">Fermé</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-white/10">
+                <a href="https://www.facebook.com/hairform.coiffeur.9" target="_blank" class="text-white hover:text-blue-500 transition text-2xl mr-4">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <span class="text-sm text-gray-400 align-middle">Suivez-nous sur Facebook</span>
+            </div>
+        </div>
+
+        <!-- Carte Google Maps Embed (Utilisant l'adresse fournie) -->
+        <div class="w-full md:w-1/2 h-[400px] md:h-auto bg-gray-200">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                style="border:0" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.007629471194!2d2.4396009!3d43.2081504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae2c6a0c20a463%3A0x94b8e2b8c8d8b8ed!2s19%20Av.%20Pasteur%2C%2011800%20Tr%C3%A8bes!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
+                allowfullscreen 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 text-white py-8 text-center border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-gray-400 text-sm">
+                &copy; 2024 Hairform Trèbes. Tous droits réservés. <br>
+                19 Avenue Pasteur, 11800 Trèbes | Tél : 04 68 78 99 00
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
