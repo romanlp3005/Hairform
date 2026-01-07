@@ -24,6 +24,9 @@
         .text-hairform-gold { color: #c3b713; }
         .bg-hairform-gold { background-color: #c3b713; }
         .border-hairform-gold { border-color: #c3b713; }
+        /* Ajout de la classe manquante pour le texte bleu */
+        .text-hairform-blue { color: #102643; }
+        
         .hover-text-hairform-gold:hover { color: #c3b713; }
         .hover-bg-hairform-gold:hover { background-color: #c3b713; }
     </style>
@@ -68,26 +71,28 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative pt-20 h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
-        <!-- Background Image : Naturelle, sans filtre de couleur -->
-        <img src="Hairform trebes.webp" alt="Salon de coiffure" class="absolute w-full h-full object-cover">
+    <!-- Modification de la hauteur : h-[65vh] sur mobile (plus petit) et h-screen sur ordinateur (grand) -->
+    <div class="relative pt-20 h-[65vh] md:h-screen min-h-[400px] md:min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
+        <!-- Background Image : Tentative de chargement de votre image locale, sinon repli sur l'image par défaut -->
+        <img src="Hairform trebes.webp" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'" alt="Salon Hairform Trèbes" class="absolute w-full h-full object-cover">
         
         <!-- Simple voile noir "un peu opaque" pour la lisibilité du texte -->
         <div class="absolute inset-0 bg-black/50 z-0"></div>
         
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <p class="text-hairform-gold uppercase tracking-[0.3em] mb-4 font-medium animate-fade-in-up">Bienvenue chez Hairform</p>
-            <h1 class="text-5xl md:text-7xl text-white font-bold mb-6 leading-tight">
+            <p class="text-hairform-gold uppercase tracking-[0.2em] text-sm md:text-base md:tracking-[0.3em] mb-2 md:mb-4 font-medium animate-fade-in-up">Bienvenue chez Hairform</p>
+            <h1 class="text-4xl md:text-7xl text-white font-bold mb-4 md:mb-6 leading-tight">
                 Révélez votre <br/><span class="italic text-hairform-gold">beauté naturelle</span>
             </h1>
-            <p class="text-gray-200 text-lg md:text-xl mb-10 font-light drop-shadow-md">
-                Votre coiffeur visagiste à Trèbes <strong>depuis 1998</strong>. Plus de 25 ans d'expertise pour elle, lui et les enfants.
+            <p class="text-gray-200 text-sm md:text-xl mb-6 md:mb-10 font-light drop-shadow-md max-w-lg mx-auto md:max-w-none">
+                Votre coiffeur visagiste à Trèbes <strong>depuis 1998</strong>.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:0468789900" class="bg-hairform-gold text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 shadow-xl text-lg">
+            <!-- Boutons optimisés pour mobile -->
+            <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 w-full sm:w-auto px-6 sm:px-0">
+                <a href="tel:0468789900" class="bg-hairform-gold text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 shadow-xl text-base md:text-lg border-2 border-hairform-gold">
                     Prendre Rendez-vous
                 </a>
-                <a href="#prestations" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 text-lg">
+                <a href="#prestations" class="border-2 border-white text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 text-base md:text-lg">
                     Voir les Tarifs
                 </a>
             </div>
