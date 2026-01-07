@@ -43,6 +43,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#salon" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Le Salon</a>
                     <a href="#prestations" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Tarifs</a>
+                    <a href="#actu" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Actualités</a>
                     <a href="#infos" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Horaires</a>
                     <a href="tel:0468789900" class="bg-hairform-gold text-white px-6 py-2 rounded-full hover:bg-white hover:text-hairform-blue transition shadow-lg font-semibold">
                         <i class="fas fa-phone-alt mr-2"></i>04 68 78 99 00
@@ -60,16 +61,19 @@
         <div id="mobile-menu" class="hidden md:hidden bg-hairform-blue border-t border-white/10">
             <a href="#salon" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Le Salon</a>
             <a href="#prestations" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Tarifs</a>
+            <a href="#actu" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Actualités</a>
             <a href="#infos" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Horaires & Accès</a>
             <a href="tel:0468789900" class="block px-4 py-3 text-hairform-gold font-bold bg-white/5">Appeler maintenant</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative pt-20 h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        <!-- Background Image with Darker Overlay for better text contrast -->
-        <div class="absolute inset-0 bg-hairform-blue opacity-50 z-0"></div> <!-- Solid color base -->
-        <img src="Hairform trebes.webp" alt="Salon de coiffure" class="absolute w-full h-full object-cover opacity-40 mix-blend-overlay">
+    <div class="relative pt-20 h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
+        <!-- Background Image : Naturelle, sans filtre de couleur -->
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Salon de coiffure" class="absolute w-full h-full object-cover">
+        
+        <!-- Simple voile noir "un peu opaque" pour la lisibilité du texte -->
+        <div class="absolute inset-0 bg-black/50 z-0"></div>
         
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <p class="text-hairform-gold uppercase tracking-[0.3em] mb-4 font-medium animate-fade-in-up">Bienvenue chez Hairform</p>
@@ -222,6 +226,39 @@
         </div>
     </section>
 
+    <!-- Section: Actualités Facebook -->
+    <section id="actu" class="py-20 bg-hairform-blue relative">
+        <!-- Ajout d'un séparateur subtil en haut -->
+        <div class="absolute top-0 left-0 w-full h-px bg-white/10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-8 font-serif">Suivez nos dernières actualités</h2>
+            <div class="flex flex-col items-center justify-center">
+                <p class="text-gray-300 mb-8 max-w-2xl">
+                    Découvrez nos dernières réalisations, nos offres du moment et la vie du salon sur notre page Facebook.
+                </p>
+                
+                <!-- Facebook Page Plugin -->
+                <div class="bg-white shadow-2xl rounded-xl overflow-hidden border border-white/10 p-2 w-full max-w-[500px]">
+                    <iframe 
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhairform.coiffeur.9&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                        width="500" 
+                        height="600" 
+                        style="border:none;overflow:hidden;max-width:100%;" 
+                        scrolling="no" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                </div>
+                
+                <a href="https://www.facebook.com/hairform.coiffeur.9" target="_blank" class="mt-8 inline-flex items-center text-white font-semibold hover:text-hairform-gold transition">
+                    Voir directement sur Facebook <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Horaires et Carte -->
     <section id="infos" class="py-0 flex flex-col md:flex-row bg-white">
         <!-- Informations -->
@@ -289,6 +326,12 @@
     <!-- Footer -->
     <footer class="bg-black/40 text-white py-8 text-center border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-6">
+                <a href="https://www.facebook.com/hairform.coiffeur.9" target="_blank" class="inline-block text-white hover:text-hairform-gold transition transform hover:scale-110">
+                    <span class="sr-only">Facebook</span>
+                    <i class="fab fa-facebook text-3xl"></i>
+                </a>
+            </div>
             <p class="text-gray-400 text-sm">
                 &copy; 2024 Hairform Trèbes. Tous droits réservés. <br>
                 19 Avenue Pasteur, 11800 Trèbes | Tél : 04 68 78 99 00
