@@ -74,27 +74,27 @@
     </nav>
 
     <!-- Hero Section -->
-    <!-- CORRECTION : Utilisation de min-h et py-32 au lieu de h-screen pour éviter le zoom excessif sur mobile -->
-    <div class="relative py-32 md:h-screen md:py-0 flex items-center justify-center overflow-hidden bg-gray-900">
-        <!-- CORRECTION : object-top pour cadrer sur le haut de l'image (visages) et onerror pour le fallback -->
-        <img src="Hairform trebes.webp" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'" alt="Salon Hairform Trèbes" class="absolute w-full h-full object-cover object-top opacity-60">
+    <!-- CORRECTION : Réduction du padding (py-24 au lieu de py-32) pour réduire la hauteur sur mobile et moins "zoomer" dans l'image 2000x1500 -->
+    <div class="relative py-24 md:h-screen md:py-0 flex items-center justify-center overflow-hidden bg-gray-900">
+        <!-- CORRECTION : object-center pour centrer l'image 4/3 globalement, souvent mieux pour les plans larges -->
+        <img src="Hairform trebes.webp" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'" alt="Salon Hairform Trèbes" class="absolute w-full h-full object-cover object-center opacity-60">
         
         <!-- Voile noir plus léger pour laisser voir l'image -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-hairform-blue/90 z-0"></div>
         
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8">
-            <p class="text-hairform-gold uppercase tracking-[0.2em] text-sm md:text-base md:tracking-[0.3em] mb-2 md:mb-4 font-medium animate-fade-in-up">Bienvenue chez Hairform</p>
-            <h1 class="text-4xl md:text-7xl text-white font-bold mb-4 md:mb-6 leading-tight drop-shadow-lg">
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-4 md:mt-8">
+            <p class="text-hairform-gold uppercase tracking-[0.2em] text-xs md:text-base md:tracking-[0.3em] mb-2 md:mb-4 font-medium animate-fade-in-up">Bienvenue chez Hairform</p>
+            <h1 class="text-3xl md:text-7xl text-white font-bold mb-3 md:mb-6 leading-tight drop-shadow-lg">
                 Révélez votre <br/><span class="italic text-hairform-gold">beauté naturelle</span>
             </h1>
-            <p class="text-gray-100 text-sm md:text-xl mb-8 md:mb-10 font-medium drop-shadow-md max-w-lg mx-auto md:max-w-none">
+            <p class="text-gray-100 text-sm md:text-xl mb-6 md:mb-10 font-medium drop-shadow-md max-w-lg mx-auto md:max-w-none">
                 Votre coiffeur visagiste à Trèbes <strong>depuis 1998</strong>.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto px-8 sm:px-0">
-                <a href="tel:0468789900" class="bg-hairform-gold text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 shadow-xl text-base md:text-lg border-2 border-hairform-gold">
+            <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 w-full sm:w-auto px-8 sm:px-0">
+                <a href="tel:0468789900" class="bg-hairform-gold text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 shadow-xl text-sm md:text-lg border-2 border-hairform-gold">
                     Prendre Rendez-vous
                 </a>
-                <a href="#prestations" class="border-2 border-white text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 text-base md:text-lg">
+                <a href="#prestations" class="border-2 border-white text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 text-sm md:text-lg">
                     Voir les Tarifs
                 </a>
             </div>
@@ -138,8 +138,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
-                    <img src="vitrine fini2.png" alt="Intérieur salon" class="absolute w-full h-full object-cover">
+                <!-- CORRECTION ICI : Remplacement de h-[500px] par aspect-[4/3] -->
+                <!-- Cela force le cadre à respecter le ratio 2000x1500 de votre photo -->
+                <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+                    <img src="image.png" onerror="this.src='https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'" alt="Intérieur salon Hairform" class="absolute w-full h-full object-cover">
                 </div>
             </div>
         </div>
