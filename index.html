@@ -49,9 +49,10 @@
 </head>
 <body class="bg-hairform-blue text-white scroll-smooth">
 
-    <!-- Navigation -->
-    <nav class="bg-hairform-blue shadow-lg border-b border-white/10 fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header (Navigation) -->
+    <!-- CHANGEMENT : Utilisation de la balise <header> sémantique pour l'en-tête du site -->
+    <header class="bg-hairform-blue shadow-lg border-b border-white/10 fixed w-full z-50 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <div class="text-2xl font-bold text-white tracking-widest serif">
@@ -74,16 +75,19 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </nav>
+        <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-hairform-blue border-t border-white/10">
-            <a href="#salon" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Le Salon</a>
-            <a href="#prestations" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Tarifs</a>
-            <a href="#avis" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Avis Clients</a>
-            <a href="#actu" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Actualités</a>
-            <a href="#infos" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Horaires & Accès</a>
-            <a href="tel:0468789900" class="block px-4 py-3 text-hairform-gold font-bold bg-white/5">Appeler maintenant</a>
+            <nav class="flex flex-col">
+                <a href="#salon" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Le Salon</a>
+                <a href="#prestations" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Tarifs</a>
+                <a href="#avis" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Avis Clients</a>
+                <a href="#actu" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Actualités</a>
+                <a href="#infos" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Horaires & Accès</a>
+                <a href="tel:0468789900" class="block px-4 py-3 text-hairform-gold font-bold bg-white/5">Appeler maintenant</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section (Bannière Fixe en Arrière-plan) -->
     <!-- CHANGEMENT : position 'fixed' et z-0 pour rester derrière le contenu -->
@@ -153,7 +157,7 @@
                     </div>
                     <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 reveal delay-200 group">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="image.png" onerror="this.src='vitrine-fini.webp'" alt="Intérieur salon Hairform" class="absolute w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <img src="vitrine-fini.webp" onerror="this.src='https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'" alt="Intérieur salon Hairform" class="absolute w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                     </div>
                 </div>
             </div>
