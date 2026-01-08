@@ -50,8 +50,8 @@
 <body class="bg-hairform-blue text-white scroll-smooth">
 
     <!-- Header (Navigation) -->
-    <!-- CHANGEMENT : Utilisation de la balise <header> sémantique pour l'en-tête du site -->
-    <header class="bg-hairform-blue shadow-lg border-b border-white/10 fixed w-full z-50 transition-all duration-300">
+    <!-- CORRECTION : Ajout de 'top-0 left-0' pour forcer le header à se coller en haut de l'écran -->
+    <header class="bg-hairform-blue shadow-lg border-b border-white/10 fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
@@ -90,8 +90,8 @@
     </header>
 
     <!-- Hero Section (Bannière Fixe en Arrière-plan) -->
-    <!-- CHANGEMENT : position 'fixed' et z-0 pour rester derrière le contenu -->
     <div class="fixed top-0 left-0 w-full z-0 h-[65vh] md:h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+        <!-- IMAGE BANNIÈRE : Hairform trebes.webp -->
         <img src="Hairform trebes.webp" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'" alt="Salon Hairform Trèbes" class="absolute w-full h-full object-cover object-center opacity-60">
         
         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-hairform-blue/90 z-0"></div>
@@ -121,7 +121,6 @@
     </div>
 
     <!-- WRAPPER PRINCIPAL (Contenu qui passe par-dessus la bannière) -->
-    <!-- CHANGEMENT : margin-top pour compenser la hauteur de la bannière fixe -->
     <main class="relative z-10 bg-hairform-blue shadow-[0_-20px_40px_rgba(0,0,0,0.5)] mt-[65vh] md:mt-[100vh]">
 
         <!-- Section: Le Salon -->
@@ -157,6 +156,7 @@
                     </div>
                     <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 reveal delay-200 group">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500 z-10"></div>
+                        <!-- IMAGE SALON : vitrine-fini.webp -->
                         <img src="vitrine-fini.webp" onerror="this.src='https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'" alt="Intérieur salon Hairform" class="absolute w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                     </div>
                 </div>
@@ -526,14 +526,16 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
+                var elementVisible = 50; // Réduit pour déclencher plus tôt
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
                 }
             }
         }
         window.addEventListener("scroll", reveal);
-        // Déclencher une fois au chargement pour les éléments déjà visibles
+        // Déclencher au chargement et au redimensionnement
+        window.addEventListener("load", reveal);
+        window.addEventListener("resize", reveal);
         reveal();
     </script>
 </body>
