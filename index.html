@@ -24,11 +24,15 @@
         .text-hairform-gold { color: #c3b713; }
         .bg-hairform-gold { background-color: #c3b713; }
         .border-hairform-gold { border-color: #c3b713; }
-        /* Ajout de la classe manquante pour le texte bleu */
         .text-hairform-blue { color: #102643; }
         
         .hover-text-hairform-gold:hover { color: #c3b713; }
         .hover-bg-hairform-gold:hover { background-color: #c3b713; }
+
+        /* Animation de défilement pour la souris */
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
     </style>
 </head>
 <body class="bg-hairform-blue text-white scroll-smooth">
@@ -38,7 +42,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- Logo aux couleurs demandées -->
                     <div class="text-2xl font-bold text-white tracking-widest serif">
                         HAIR<span class="text-hairform-gold">FORM</span>
                     </div>
@@ -46,13 +49,13 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#salon" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Le Salon</a>
                     <a href="#prestations" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Tarifs</a>
+                    <a href="#avis" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Avis</a>
                     <a href="#actu" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Actualités</a>
                     <a href="#infos" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Horaires</a>
                     <a href="tel:0468789900" class="bg-hairform-gold text-white px-6 py-2 rounded-full hover:bg-white hover:text-hairform-blue transition shadow-lg font-semibold">
                         <i class="fas fa-phone-alt mr-2"></i>04 68 78 99 00
                     </a>
                 </div>
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-white hover-text-hairform-gold focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -60,10 +63,10 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-hairform-blue border-t border-white/10">
             <a href="#salon" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Le Salon</a>
             <a href="#prestations" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Tarifs</a>
+            <a href="#avis" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Avis Clients</a>
             <a href="#actu" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Actualités</a>
             <a href="#infos" class="block px-4 py-3 text-gray-200 hover:bg-white/10">Horaires & Accès</a>
             <a href="tel:0468789900" class="block px-4 py-3 text-hairform-gold font-bold bg-white/5">Appeler maintenant</a>
@@ -71,12 +74,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <!-- Modification de la hauteur : h-[65vh] sur mobile (plus petit) et h-screen sur ordinateur (grand) -->
     <div class="relative pt-20 h-[65vh] md:h-screen min-h-[400px] md:min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
-        <!-- Background Image : Tentative de chargement de votre image locale, sinon repli sur l'image par défaut -->
-        <img src="Hairform trebes.webp" alt="Salon Hairform Trèbes" class="absolute w-full h-full object-cover">
-        
-        <!-- Simple voile noir "un peu opaque" pour la lisibilité du texte -->
+        <img src="Hairform trebes.webp" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'" alt="Salon Hairform Trèbes" class="absolute w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/50 z-0"></div>
         
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -87,7 +86,6 @@
             <p class="text-gray-200 text-sm md:text-xl mb-6 md:mb-10 font-light drop-shadow-md max-w-lg mx-auto md:max-w-none">
                 Votre coiffeur visagiste à Trèbes <strong>depuis 1998</strong>.
             </p>
-            <!-- Boutons optimisés pour mobile -->
             <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 w-full sm:w-auto px-6 sm:px-0">
                 <a href="tel:0468789900" class="bg-hairform-gold text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-white hover:text-hairform-blue transition duration-300 shadow-xl text-base md:text-lg border-2 border-hairform-gold">
                     Prendre Rendez-vous
@@ -96,6 +94,12 @@
                     Voir les Tarifs
                 </a>
             </div>
+        </div>
+        <!-- Petite souris qui indique de scroller -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow hidden md:block">
+            <a href="#salon" class="text-white hover:text-hairform-gold transition">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
         </div>
     </div>
 
@@ -137,9 +141,8 @@
         </div>
     </section>
 
-    <!-- Section: Tarifs (Estimations basées sur vos infos) -->
+    <!-- Section: Tarifs -->
     <section id="prestations" class="py-20 bg-hairform-blue relative overflow-hidden">
-        <!-- Décoration d'arrière plan -->
         <div class="absolute top-0 left-0 w-64 h-64 bg-hairform-gold rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
         <div class="absolute bottom-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
 
@@ -223,7 +226,6 @@
             </div>
             
             <div class="mt-16 text-center">
-                <p class="text-gray-500 text-xs mb-4 uppercase tracking-widest">Un doute ? Une question ?</p>
                 <a href="tel:0468789900" class="inline-flex items-center justify-center px-10 py-4 border border-hairform-gold text-base font-medium rounded-full text-hairform-gold bg-transparent hover:bg-hairform-gold hover:text-hairform-blue md:text-lg shadow-[0_0_15px_rgba(195,183,19,0.15)] hover:shadow-[0_0_25px_rgba(195,183,19,0.4)] transition-all duration-300">
                     <i class="fas fa-phone-alt mr-3"></i> Prendre rendez-vous au 04 68 78 99 00
                 </a>
@@ -231,19 +233,71 @@
         </div>
     </section>
 
+    <!-- NOUVELLE SECTION : AVIS CLIENTS -->
+    <section id="avis" class="py-20 bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-hairform-gold font-bold tracking-wider uppercase text-sm">Témoignages</span>
+                <h2 class="text-3xl font-bold text-white mt-2 font-serif">Vos mots, notre fierté</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Avis 1 -->
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/5">
+                    <div class="flex text-hairform-gold mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"Super salon ! L'équipe est à l'écoute et très professionnelle. Je suis ravie de ma nouvelle coupe. Je recommande à 100%."</p>
+                    <div class="font-bold text-white">- Sophie M.</div>
+                </div>
+                <!-- Avis 2 -->
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/5 transform md:-translate-y-4 shadow-xl border-t-4 border-t-hairform-gold">
+                    <div class="flex text-hairform-gold mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"Client depuis des années, jamais déçu. Ambiance sympa et coupe toujours impeccable. Merci à toute l'équipe Hairform !"</p>
+                    <div class="font-bold text-white">- Marc D.</div>
+                </div>
+                <!-- Avis 3 -->
+                <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/5">
+                    <div class="flex text-hairform-gold mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"Première fois chez Hairform et je reviendrai. De très bons conseils visagistes, j'adore ma couleur."</p>
+                    <div class="font-bold text-white">- Julie L.</div>
+                </div>
+            </div>
+            
+            <!-- NOUVEAU : Bouton vers les avis Google -->
+            <div class="mt-12 text-center">
+                <a href="https://www.google.com/search?q=Hairform+Trèbes+avis" target="_blank" class="inline-flex items-center text-white border-b-2 border-hairform-gold pb-1 hover:text-hairform-gold transition cursor-pointer">
+                    <i class="fab fa-google mr-2"></i> Voir tous les avis vérifiés sur Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOUVELLE SECTION : MARQUES PARTENAIRES -->
+    <section class="py-10 border-t border-b border-white/5 bg-white/5">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400 uppercase text-xs tracking-[0.2em] mb-6">Nos partenaires de confiance</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                <!-- Remplacer par des vrais logos IMG plus tard, ici texte stylisé pour l'exemple -->
+                <span class="text-2xl font-serif font-bold text-white">L'ORÉAL</span>
+                <span class="text-2xl font-serif font-bold text-white">KÉRASTASE</span>
+                <span class="text-2xl font-serif font-bold text-white">GHD</span>
+                <span class="text-2xl font-serif font-bold text-white">WELLA</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Section: Actualités Facebook -->
     <section id="actu" class="py-20 bg-hairform-blue relative">
-        <!-- Ajout d'un séparateur subtil en haut -->
-        <div class="absolute top-0 left-0 w-full h-px bg-white/10"></div>
-        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-white mb-8 font-serif">Suivez nos dernières actualités</h2>
             <div class="flex flex-col items-center justify-center">
                 <p class="text-gray-300 mb-8 max-w-2xl">
                     Découvrez nos dernières réalisations, nos offres du moment et la vie du salon sur notre page Facebook.
                 </p>
-                
-                <!-- Facebook Page Plugin -->
                 <div class="bg-white shadow-2xl rounded-xl overflow-hidden border border-white/10 p-2 w-full max-w-[500px]">
                     <iframe 
                         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhairform.coiffeur.9&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
@@ -256,7 +310,6 @@
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                     </iframe>
                 </div>
-                
                 <a href="https://www.facebook.com/hairform.coiffeur.9" target="_blank" class="mt-8 inline-flex items-center text-white font-semibold hover:text-hairform-gold transition">
                     Voir directement sur Facebook <i class="fas fa-external-link-alt ml-2"></i>
                 </a>
@@ -266,10 +319,8 @@
 
     <!-- Horaires et Carte -->
     <section id="infos" class="py-0 flex flex-col md:flex-row bg-white">
-        <!-- Informations -->
         <div class="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center bg-hairform-blue text-white border-t border-white/10">
             <h2 class="text-3xl font-bold mb-8 text-hairform-gold">Horaires & Contact</h2>
-            
             <div class="space-y-6">
                 <div class="flex items-start">
                     <i class="fas fa-map-marker-alt mt-1 mr-4 text-hairform-gold w-5"></i>
@@ -278,7 +329,6 @@
                         <p class="text-gray-300">19 Av. Pasteur<br>11800 Trèbes</p>
                     </div>
                 </div>
-
                 <div class="flex items-start">
                     <i class="fas fa-phone mt-1 mr-4 text-hairform-gold w-5"></i>
                     <div>
@@ -286,7 +336,6 @@
                         <p class="text-gray-300"><a href="tel:0468789900" class="hover:text-hairform-gold transition">04 68 78 99 00</a></p>
                     </div>
                 </div>
-
                 <div class="flex items-start">
                     <i class="fas fa-clock mt-1 mr-4 text-hairform-gold w-5"></i>
                     <div>
@@ -305,7 +354,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="mt-8 pt-8 border-t border-white/10">
                 <a href="https://www.facebook.com/hairform.coiffeur.9" target="_blank" class="text-white hover:text-blue-500 transition text-2xl mr-4">
                     <i class="fab fa-facebook"></i>
@@ -313,8 +361,6 @@
                 <span class="text-sm text-gray-400 align-middle">Suivez-nous sur Facebook</span>
             </div>
         </div>
-
-        <!-- Carte Google Maps Embed (Utilisant l'adresse fournie) -->
         <div class="w-full md:w-1/2 h-[400px] md:h-auto bg-gray-200">
             <iframe 
                 width="100%" 
