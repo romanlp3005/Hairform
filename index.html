@@ -50,14 +50,14 @@
 <body class="bg-hairform-blue text-white scroll-smooth">
 
     <!-- Header (Navigation) -->
-    <!-- CORRECTION : Ajout de 'top-0 left-0' pour forcer le header à se coller en haut de l'écran -->
     <header class="bg-hairform-blue shadow-lg border-b border-white/10 fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <div class="text-2xl font-bold text-white tracking-widest serif">
-                        HAIR<span class="text-hairform-gold">FORM</span>
-                    </div>
+                    <!-- LOGO : Remplacement du texte par l'image Logo-Hairform.webp -->
+                    <a href="#" class="block h-full py-2">
+                        <img src="Logo-Hairform.webp" alt="Hairform Logo" class="h-full w-auto object-contain">
+                    </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#salon" class="text-gray-300 hover-text-hairform-gold transition uppercase text-sm tracking-wider font-medium">Le Salon</a>
@@ -158,6 +158,77 @@
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500 z-10"></div>
                         <!-- IMAGE SALON : vitrine-fini.webp -->
                         <img src="vitrine-fini.webp" onerror="this.src='https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'" alt="Intérieur salon Hairform" class="absolute w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOUVELLE SECTION : NOS INSTALLATIONS -->
+        <section class="py-20 bg-black/20 border-t border-white/5 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-hairform-gold font-bold tracking-wider uppercase text-sm">Nos Installations</span>
+                    <h2 class="text-3xl font-bold text-white mt-2 font-serif">Un espace pensé pour vous</h2>
+                    <div class="w-24 h-1 bg-hairform-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Espace Bacs -->
+                    <div class="group bg-white/5 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 border border-white/5 reveal delay-100 shadow-lg hover:shadow-hairform-gold/10">
+                        <div class="h-56 overflow-hidden relative">
+                            <!-- IMAGE BACS : Hairform-Bacs-Relaxants.webp -->
+                            <img src="Hairform-Bacs-Relaxants.webp" onerror="this.src='https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80'" alt="Espace Bacs Hairform" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <div class="absolute top-4 right-4 bg-hairform-gold text-hairform-blue font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wide shadow-md">Détente</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 rounded-full bg-hairform-gold/20 flex items-center justify-center text-hairform-gold font-bold">3</div>
+                                <h3 class="text-xl font-bold text-white">Bacs Relaxants</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Installez-vous confortablement dans l'un de nos trois bacs dédiés aux soins et shampooings. Un moment de calme idéal pour profiter d'un massage crânien.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Postes de Coiffure (AVEC EFFET SURVOL) -->
+                    <div class="group bg-white/5 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 border border-white/5 reveal delay-200 shadow-lg hover:shadow-hairform-gold/10">
+                        <div class="h-56 relative overflow-hidden">
+                            <!-- Image 1 (Gauche) - Visible par défaut -->
+                            <img src="Hairform-Postes-de-Coiffure-gauche.webp" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80'" alt="Postes Coiffure Gauche" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                            
+                            <!-- Image 2 (Droite) - Apparaît au survol -->
+                            <img src="Hairform-Postes-de-Coiffure-droite_1.webp" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80'" alt="Postes Coiffure Droite" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                            
+                            <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 rounded-full bg-hairform-gold/20 flex items-center justify-center text-hairform-gold font-bold">7</div>
+                                <h3 class="text-xl font-bold text-white">Postes de Coiffure</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Le salon dispose de jusqu'à 7 postes de travail spacieux et modernes. Nous vous accueillons sans attente pour réaliser vos coupes, couleurs et brushings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Onglerie -->
+                    <div class="group bg-white/5 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 border border-white/5 reveal delay-300 shadow-lg hover:shadow-hairform-gold/10">
+                        <div class="h-56 overflow-hidden relative">
+                            <!-- IMAGE ONGLERIE : Hairform-Espace-Onglerie.webp -->
+                            <img src="Hairform-Espace-Onglerie.webp" onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80'" alt="Espace Onglerie Hairform" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <div class="absolute top-4 right-4 bg-hairform-gold text-hairform-blue font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wide shadow-md">Beauté</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 rounded-full bg-hairform-gold/20 flex items-center justify-center text-hairform-gold"><i class="fas fa-gem text-xs"></i></div>
+                                <h3 class="text-xl font-bold text-white">Espace Onglerie</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Pour parfaire votre mise en beauté, découvrez notre coin dédié à l'onglerie. Manucure et soins des mains pour une finition élégante jusqu'au bout des ongles.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
